@@ -48,10 +48,23 @@ public class Main {
            }
         }
 
+        public static boolean trueOrFalse(int u){
+           if (u>=0){
+               return false;
+           }
+           else {
+               return true;
+           }
+        }
+
+
+
+
     public static void main(String[] args) {
         System.out.println(Dima(1,2,4,4));
         System.out.println(methodName(10,7));
         isPositiveOrNegative(100);
+        System.out.println(trueOrFalse(-7));
         int i;
         i=188;
         float k;
