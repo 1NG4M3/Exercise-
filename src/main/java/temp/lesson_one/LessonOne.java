@@ -1,4 +1,4 @@
-package lesson_one;
+package temp.lesson_one;
 
 public class LessonOne {
 
