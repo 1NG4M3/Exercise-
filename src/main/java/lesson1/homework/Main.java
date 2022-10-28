@@ -57,6 +57,17 @@ public class Main {
            }
         }
 
+        public static void helloName(String str){
+            System.out.println("Привет, " + str + "!");
+        }
+
+        public static void kakoiGod(int v) {
+            if (v % 4 == 0 && (v % 100 != 0 || v % 400 == 0)) {
+                System.out.println("Год: " + v + " является високосным!");
+            } else {
+                System.out.println("Год: " + v + " НЕ является високосным!");
+            }
+        }
 
 
 
@@ -65,6 +76,13 @@ public class Main {
         System.out.println(methodName(10,7));
         isPositiveOrNegative(100);
         System.out.println(trueOrFalse(-7));
+        helloName("Dmitry");
+        kakoiGod(2003);
+        
+
+
+
+
         int i;
         i=188;
         float k;
