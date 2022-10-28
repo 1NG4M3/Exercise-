@@ -29,27 +29,28 @@ public class Main {
 
         return result;
     }
-    public static int suma(int a, int b){
-        int a=10, b=15;
-        int x = a + b;
-        return x;
+    public static boolean methodName(int a, int b){
+        int sum = a+b;
+        if (sum<10&&sum>20){
+            return false;
+        }
+        else {
+            return true;
+        }
 
-    }
 
-        if (x<10 && x>20){ // пишет java: illegal start of type
-        System.out.println(false);
-    }
-        if (x>=10 && x<=20){ // пишет java: illegal start of type
-        System.out.println(true);
     }
     public static void main(String[] args) {
+            int a= 10;
+            int b= 7;
+
+
+
 
 
         System.out.println(Dima(1,2,4,4));
         float k;
         k=1.2f;
-        int a;
-        a=11;
         long w;
         w=111L;
         byte v;
