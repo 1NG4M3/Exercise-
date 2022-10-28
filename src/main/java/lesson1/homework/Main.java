@@ -29,26 +29,31 @@ public class Main {
 
         return result;
     }
-    public static boolean methodName(int a, int b){
-        int sum = a+b;
-        if (sum<10&&sum>20){
+    public static boolean methodName(int a, int b) {
+
+        int sum = a + b;
+        if (sum < 10 && sum > 20) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
-
-
     }
+        public static void isPositiveOrNegative(int i){
+           if (i>=0){
+               System.out.println("Positive");
+
+           }
+           else {
+               System.out.println("Negative");
+           }
+        }
+
     public static void main(String[] args) {
-            int a= 10;
-            int b= 7;
-
-
-
-
-
         System.out.println(Dima(1,2,4,4));
+        System.out.println(methodName(10,7));
+        isPositiveOrNegative(100);
+        int i;
+        i=188;
         float k;
         k=1.2f;
         long w;
@@ -71,5 +76,4 @@ public class Main {
 
 
         }
-
-    }
+}
