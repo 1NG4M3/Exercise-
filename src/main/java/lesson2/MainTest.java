@@ -15,7 +15,6 @@
 помощи интернета);
 6. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
 метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части
-© geekbrains.ru 12
 массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, ||
 2, 1]) → true, граница показана символами ||, эти символы в массив не входят.
 7. **** Написать метод, которому на вход подается одномерный массив и число n (может быть
@@ -39,6 +38,16 @@ public class MainTest {
                 taskOne();
                 System.out.println();
                 taskTwo();
+                System.out.println();
+                taskThree();
+                System.out.println();
+                taskFour();
+                System.out.println();
+                taskFive();
+                System.out.println();
+                int[] cat={1,2,1,1,2,1};
+                System.out.println("Task six check: ");
+                System.out.println(taskSix(cat));
                 System.out.println();
 
 
@@ -72,8 +81,102 @@ public class MainTest {
 
         }
 
+        /*
+         3. Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом, и числа меньшие 6
+         умножить на 2;
+ */
+        public static void taskThree() {
+
+                int[] mass = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+                int[] mass2 = new int[mass.length];
+
+                for (int i = 0; i < mass2.length; i++) {
+
+                        if (mass[i] < 6) {
+                                mass[i] *= 2;
+                                System.out.print(mass[i] + " ");
+                        } else {
+
+                                System.out.print(mass[i] + " ");
+
+
+                        }
+                }
 
         }
+     /*   4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов
+                одинаковое), и с помощью цикла(-ов) заполнить его диагональные элементы единицами
+                (можно только одну из диагоналей, если обе сложно). Определить элементы одной из
+        диагоналей можно по следующему принципу: индексы таких элементов равны, то есть [0][0],
+                [1][1], [2][2], …, [n][n];
+    */
+
+
+        public static void taskFour() {
+                int square = 5;
+                int[][] table = new int[square][square];
+                for (int i = 0; i < square; i++) {
+                        table[i][i] = 1;
+                        table[i][square - i - 1] = 1;
+                }
+
+                System.out.println("Task four check:");
+                for (int i = 0; i < square; i++) {
+                        for (int j = 0; j < square; j++) {
+                                System.out.print(table[i][j] + " ");
+                        }
+                        System.out.println();
+                }
+        }
+        /*
+        5. ** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
+         */
+         public static void taskFive() {
+                 int[] sobaka = {9,212,121,-4};
+                 int min = sobaka[0];
+                 int max = sobaka[0];
+                 for (int i=0;i<sobaka.length;i++){
+                         if(min>=sobaka[i]){
+                                 min=sobaka[i];
+                         } else if (max<=sobaka[i]) {
+                                 max=sobaka[i];
+
+                         }
+
+
+                 }
+                 System.out.println("Task five check:");
+                 System.out.println("Максимальный элемент: " + max);
+                 System.out.println("Минимальный элемент: " + min);
+
+         }
+        /*6. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
+        метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части
+        массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, ||
+        2, 1]) → true, граница показана символами ||, эти символы в массив не входят.
+*/
+
+
+        public static boolean taskSix(int[] cat){
+
+                int sumCat=0;
+                int leftCat=0;
+
+                for (int i=0; i<cat.length;i++){
+                        sumCat+=cat[i];
+
+                }
+
+                for (int i=0; i<cat.length;i++){
+
+                        leftCat+=cat[i];
+                        if(leftCat==sumCat-leftCat){
+                                return true;
+                        }
+                }
+                return false;
+        }
+}
 
 
 
