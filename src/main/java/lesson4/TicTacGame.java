@@ -50,8 +50,8 @@ public class TicTacGame {
                 return true;
         if ((map[0][0] == dot && map[1][1] == dot &&
                 map[2][2] == dot && map[3][3]==dot) ||
-                (map[2][0] == dot && map[1][1] == dot &&
-                        map[0][2] == dot && map[3][3]==dot))
+                (map[3][0] == dot && map[2][1] == dot &&
+                        map[1][2] == dot && map[0][3]==dot))
             return true;
         return false;
     }
@@ -98,7 +98,41 @@ public class TicTacGame {
         System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y +
                 1));
         map[y][x] = DOT_O;
+            System.out.println("Теперь Ваш ход.");
+            // Находим выйгрышный ход компьютера
+            for (int i = 0; i < SIZE; i++) {
+                for (int j = 0; j < SIZE; j++) {
+                    if (map[i][j] == DOT_EMPTY) {
+                        map[i][j] = DOT_O;
+                        if (checkWin(DOT_O))
+                            return;
+                        if (!checkWin(DOT_O)) {
+                            map[i][j] = DOT_EMPTY;
+                        }
+                    }
+                }
+            }
+            //Блокируем выигрышный ход человека
+            for (int i = 0; i < SIZE; i++) {
+                for (int j = 0; j < SIZE; j++) {
+                    if (map[i][j] == DOT_EMPTY) {
+                        map[i][j] = DOT_X;
+                        if (checkWin(DOT_X)) {
+                            map[i][j] = DOT_O;
+                            return;
+                        }
+                        if (!checkWin(DOT_X)) {
+                            map[i][j] = DOT_EMPTY;
+                        }
+                    }
+                }
+            }
+
+
+
     }
+
+
     public static void humanTurn() {
         int x, y;
         do {
