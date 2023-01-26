@@ -1,14 +1,48 @@
 package stage2.lesson1;
 
-public class Human implements WorkingSpace {
-    public static String name;
-    public static int age;
+public class Human implements RunAndJump{
+    private final String name;
+    private int might;
+    private int stamina;
 
-    public Human(String name, int age) {
+    public Human(String name, int might, int stamina) {
         this.name = name;
-        this.age = age;
+        this.might = might;
+        this.stamina = stamina;
     }
-    public static void info(){
-        System.out.println(name + ": Я умею бегать и прыгать");
+
+    @Override
+    public boolean jump(Wall wall) {
+        int height = wall.getHEIGHT();
+        if (height <= might) {
+            might -= height;
+            System.out.println(name + " перепрыгнул стену, высотой в " + height + "!");
+            System.out.println(name + " продолжает гонку!");
+        } else {
+            System.out.println(name + " не осилил стену, высотой в " + height + "!");
+            System.out.println(name + " выбывает из гонки!");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean run(Track track) {
+        int length = track.getLENGTH();
+        if (length <= stamina) {
+            stamina -= length;
+            System.out.println(name + " пробежал трек, длиной в " + length + "!");
+            System.out.println(name + " продолжает гонку!");
+        } else {
+            System.out.println(name + " потратил всю выносливость, и не осилил трек длинной в " + length + "!");
+            System.out.println(name + " выбывает из гонки!");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
