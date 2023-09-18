@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.util.Objects;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -23,7 +24,7 @@ public class MyCalculator
 
     public MyCalculator()
     {
-        window.setSize(480, 405);
+        window.setSize(700, 800);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.white);
         window.setLayout(null);
@@ -42,7 +43,7 @@ public class MyCalculator
     private void enter_area()
     {
         imput.setFont(new Font("Arial", Font.BOLD, 24));
-        imput.setBounds(16, 10, 248, 36);
+        imput.setBounds(16, 10, 248, 110);
         imput.setBackground(Color.white);
         imput.setHorizontalAlignment(JTextField.RIGHT);
 
@@ -163,8 +164,8 @@ public class MyCalculator
     private void logo()
     {
         JLabel fon = new JLabel();
-        fon.setBounds(0, 0, 480, 405);
-        fon.setIcon(new ImageIcon(getClass().getResource("/images/polina.jpg")));
+        fon.setBounds(0, 0, 300, 400);
+        fon.setIcon(new ImageIcon("java.jpg"));
         fon.setHorizontalAlignment(SwingConstants.LEFT);
         window.add(fon);
     }
@@ -175,7 +176,7 @@ public class MyCalculator
         JLabel autor = new JLabel();
         autor.setFont(new Font("Arial", Font.BOLD, 14));
         autor.setBounds(400, 350, 80, 18);
-        autor.setText("© Nidl");
+        autor.setText("© Dmitry");
         autor.setHorizontalAlignment(SwingConstants.CENTER);
         autor.setVerticalAlignment(JLabel.CENTER);
         autor.setOpaque(false);

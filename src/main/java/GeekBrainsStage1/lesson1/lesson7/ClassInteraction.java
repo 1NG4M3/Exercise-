@@ -39,7 +39,6 @@ public class ClassInteraction {
         return cats;
     }
 
-
     public static void hungryCats(Cat[] cats) {
         Cat[] hungry = new Cat[cats.length];
         int position = 0;
@@ -56,7 +55,7 @@ public class ClassInteraction {
         System.out.println("============================================");
         System.out.println("Список голодных кошек:");
         for (int i = 0; i < hungry.length; i++) {
-            if (hungry[i] != null){
+            if (hungry[i] != null) {
                 hungry[i].satietyInfo();
             }
         }

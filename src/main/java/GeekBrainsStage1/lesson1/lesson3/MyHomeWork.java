@@ -5,8 +5,6 @@ import java.util.Random;
 
 public class MyHomeWork {
 
-
-
     /*Написать программу, которая загадывает случайное число от 0 до 9 и пользователю дается 3
 попытки угадать это число. При каждой попытке компьютер должен сообщить, больше ли
 указанное пользователем число, чем загаданное, или меньше. После победы или проигрыша
@@ -15,13 +13,10 @@ public class MyHomeWork {
     public static Scanner scanner = new Scanner(System.in);
     public static Random rand = new Random();
 
-
     public static void main(String[] args) {
         greetings();
         repeatTheGame();
     }
-
-
 
     public static void theGame() {
         int answer = rand.nextInt(10);
@@ -44,11 +39,10 @@ public class MyHomeWork {
             }
         } while (counter > 0 && x != answer);
 
-        if (counter == 0){
+        if (counter == 0) {
             System.out.println("Вы проиграли! Может повезет в следующий раз!?");
         }
     }
-
 
     public static void greetings() {
         System.out.println("Вас приветствует игра Угадай число!");
@@ -57,16 +51,15 @@ public class MyHomeWork {
         System.out.println("Начнем!");
     }
 
-
     public static void repeatTheGame() {
         int repeat;
-        do{
+        do {
             theGame();
             System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
             repeat = scanner.nextInt();
         } while (repeat == 1);
     }
-        }
+}
 
 
 

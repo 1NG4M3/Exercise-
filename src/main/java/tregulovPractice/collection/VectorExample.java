@@ -1,5 +1,6 @@
 package tregulovPractice.collection;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class VectorExample {
@@ -16,5 +17,10 @@ public class VectorExample {
         System.out.println(vector);
         System.out.println(vector.get(1));
         System.out.println(vector);
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Vasya");
+        list.get(0);
+        list.indexOf("Vasya");
     }
 }

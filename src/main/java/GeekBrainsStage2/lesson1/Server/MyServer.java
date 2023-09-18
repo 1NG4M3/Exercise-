@@ -37,7 +37,7 @@ public class MyServer {
                 try {
                     Socket socket = server.accept();
                     new ClientHandler(this, socket);
-//                    System.out.println("Client has connected!");
+//                    System.out.println("someTraining.Client has connected!");
                     LOGGER.info("Клиент подключен");
                 } catch (IOException e) {
 //                    e.printStackTrace();
@@ -80,7 +80,7 @@ public class MyServer {
         for (ClientHandler o : clients) {
             if (o.getName().equals(nickTo)) {
                 o.sendMsg("From: " + from.getName() + ": " + msg);
-                from.sendMsg("To Client " + nickTo + ": " + msg);
+                from.sendMsg("To someTraining.Client " + nickTo + ": " + msg);
                 return;
             }
         }

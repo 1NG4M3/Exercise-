@@ -12,8 +12,8 @@ public class TaskFive {
     }
 
     public static void main(String[] args) {
-        int[] array = {78,56,232,12,-1,43};
-        int min     = IntStream.of(array).min().getAsInt();
-        System.out.println("Minimum: "+min);
+        int[] array = {78, 56, 232, 12, -1, 43};
+        int min = IntStream.of(array).min().getAsInt();
+        System.out.println("Minimum: " + min);
     }
 }

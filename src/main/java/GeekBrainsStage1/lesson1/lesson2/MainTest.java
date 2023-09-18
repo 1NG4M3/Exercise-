@@ -29,13 +29,11 @@
 
  */
 
-        package GeekBrainsStage1.lesson1.lesson2;
+package GeekBrainsStage1.lesson1.lesson2;
 
 import java.sql.PreparedStatement;
 
 public class MainTest {
-
-
     public static void main(String[] args) {
         taskOne();
         System.out.println();
@@ -54,10 +52,8 @@ public class MainTest {
         int[] dog = {1, 5, 4, 2};
         int n = 2;
         System.out.println("Task seven check: ");
-        System.out.println(taskSeven(dog,n));
+        System.out.println(taskSeven(dog, n));
         System.out.println();
-
-
     }
 
     public static void taskOne() {
@@ -85,7 +81,6 @@ public class MainTest {
             System.out.print(i + " ");
             System.out.println(j);
         }
-
     }
 
     /*
@@ -105,11 +100,8 @@ public class MainTest {
             } else {
 
                 System.out.print(mass[i] + " ");
-
-
             }
         }
-
     }
      /*   4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов
                 одинаковое), и с помощью цикла(-ов) заполнить его диагональные элементы единицами
@@ -117,7 +109,6 @@ public class MainTest {
         диагоналей можно по следующему принципу: индексы таких элементов равны, то есть [0][0],
                 [1][1], [2][2], …, [n][n];
     */
-
 
     public static void taskFour() {
         int square = 5;
@@ -150,20 +141,16 @@ public class MainTest {
                 max = sobaka[i];
 
             }
-
-
         }
         System.out.println("Task five check:");
         System.out.println("Максимальный элемент: " + max);
         System.out.println("Минимальный элемент: " + min);
-
     }
         /*6. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
         метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части
         массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true, checkBalance([1, 1, 1, ||
         2, 1]) → true, граница показана символами ||, эти символы в массив не входят.
 */
-
 
     public static boolean taskSix(int[] cat) {
 
@@ -196,7 +183,6 @@ public class MainTest {
     выполнения.
      */
 
-
     public static int taskSeven(int[] dog, int n) {
         int leftStep = 0;
         int rightStep = 0;
@@ -204,18 +190,14 @@ public class MainTest {
         for (int i = 0; i < dog.length; i++) {
             leftStep += dog[n] + i;
 
-
         }
         for (int i = 0; i < dog.length; i++) {
-           rightStep += dog[n] - i;
+            rightStep += dog[n] - i;
 
-            if (rightStep==dog[n]-i) {
+            if (rightStep == dog[n] - i) {
                 return rightStep;
             }
-
         }
-
-
         return leftStep;
     }
 }

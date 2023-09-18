@@ -41,7 +41,7 @@ public class ClientHandler {
                 }
             }).start();
         } catch (IOException e) {
-            throw new RuntimeException("Client creating problem...");
+            throw new RuntimeException("someTraining.Client creating problem...");
         }
     }
 

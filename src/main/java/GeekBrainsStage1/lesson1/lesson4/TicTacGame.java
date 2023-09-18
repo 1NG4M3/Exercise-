@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class TicTacGame {
     public static int SIZE = 4;
-
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
@@ -55,32 +54,6 @@ public class TicTacGame {
             return true;
         return false;
     }
-
-
-
-
-
-        /*
-        if(map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return
-                true;
-        if(map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return
-                true;
-        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return
-                true;
-        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return
-                true;
-        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return
-                true;
-        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return
-        true;
-        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return
-                true;
-        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return
-                true;
-        return false;
-
-
-         */
     public static boolean isMapFull() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
@@ -127,11 +100,7 @@ public class TicTacGame {
                     }
                 }
             }
-
-
-
     }
-
 
     public static void humanTurn() {
         int x, y;

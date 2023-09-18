@@ -17,7 +17,7 @@ public class ServerConsole {
         try (ServerSocket serverSocket = new ServerSocket(8189)) {
             System.out.println("Server is running. Waiting for connection...");
             socket = serverSocket.accept();
-            System.out.println("Client has connected.");
+            System.out.println("someTraining.Client has connected.");
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
@@ -25,7 +25,7 @@ public class ServerConsole {
                 try {
                     while (true) {
                         String str = in.readUTF();
-                        System.out.println("Client request: " + str);
+                        System.out.println("someTraining.Client request: " + str);
                         if (str.equals("/end")) {
                             break;
                         }
@@ -33,9 +33,9 @@ public class ServerConsole {
                             System.out.println("Sending /end to the client.");
                             out.writeUTF("/end");
                         } else {
-                            out.writeUTF("Client: " + str);
+                            out.writeUTF("someTraining.Client: " + str);
                             System.out.println("Response to client:");
-                            System.out.println("Client: " + str);
+                            System.out.println("someTraining.Client: " + str);
                         }
                     }
                 } catch (IOException exc) {

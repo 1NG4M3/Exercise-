@@ -6,13 +6,5 @@ public class Main {
         Cat cat = new Cat();
         Dog dog = new Dog();
         Animal.voice();
-
-       // Dog.voice();
-       // Cat.voice();
-
-
-
-
-
     }
 }

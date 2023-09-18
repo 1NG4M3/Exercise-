@@ -86,7 +86,7 @@ public class ClientGui extends JFrame {
     public void prepareGui() {
         // Параметры окна
         setBounds(200, 100, 500, 500);
-        setTitle("Client");
+        setTitle("someTraining.Client");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Текстовое поле для вывода сообщений

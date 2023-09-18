@@ -3,6 +3,8 @@ package tregulovLambda;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 public class StudentInfo {
     public static void main(String[] args) {
@@ -47,6 +49,17 @@ public class StudentInfo {
 //        info.printStudentUnderAge(students, 30);
 //        System.out.println("----------------------------------------------");
 //        info.printStudentMixCondition(students, 20,9.5,'f');
+        Function<Student, Double> f = student -> student.avgGrade;
+        double res = avgOfSmth(students, student -> (double)student.age);
+        System.out.println(res);
+    }
+    private static double avgOfSmth(List<Student> list, Function<Student, Double> f) {
+        double result = 0;
+        for(Student st : list){
+            result+=f.apply(st);
+        }
+        result = result/list.size();
+        return result;
     }
     void printStudentOverGrade(ArrayList<Student> al, double grade) {
         for(Student s: al){

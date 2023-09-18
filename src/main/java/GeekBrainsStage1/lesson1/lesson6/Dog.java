@@ -10,10 +10,6 @@ public Dog(){
     this.s=s;
     number++;
 }
-static void voice(){
-   // System.out.print("Собака пробежала:" + Dog.runDog(150));
-   // System.out.println("Собака " + runDog(500) + "м" + " " + swimDog(10) + "м");
-}
     static int runDog(int z){
         return z;}
     static int swimDog(int s){

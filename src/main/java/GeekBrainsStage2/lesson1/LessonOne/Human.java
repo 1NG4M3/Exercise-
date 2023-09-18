@@ -1,6 +1,6 @@
 package GeekBrainsStage2.lesson1.LessonOne;
 
-public class Human implements RunAndJump{
+public class Human implements RunAndJump {
     private final String name;
     private int might;
     private int stamina;

@@ -6,13 +6,6 @@ public class FireStarter {
 
     public static void main(String[] args) {
         FireStarter fs = new FireStarter();
-//        int[] a = {1, 2, 3, 4, 5, 6, 7};
-//        int[] myTest = fs.foursCutter(a);
-
-        // Вызовет RuntimeException =P
-//        System.out.println(Arrays.toString(myTest));
-//        fs.foursCutter(new int[] {1, 1, 1, 1});
-
     }
     /*
     Написать метод, которому в качестве аргумента передается не пустой одномерный целочисленный массив.
